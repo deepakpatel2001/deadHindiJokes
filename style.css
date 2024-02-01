@@ -137,6 +137,7 @@ body{
 
     .nameHighligter{
         font-size: 2rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     .rgj{
@@ -161,13 +162,13 @@ body{
     .nameHighligter{
         display: block;
         font-size: 2rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     .rjG{
         margin: 0 auto;
     }
 }
-
 
 @media screen and (max-width: 287px) {
     html{
@@ -182,6 +183,7 @@ body{
     .nameHighligter{
         display: block;
         font-size: 2rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     .paraClass{
@@ -191,6 +193,7 @@ body{
     .rjG{
         margin: 0 10rem;
     }
+    
 
     .paraClass{
         margin: 2rem 0;
@@ -210,6 +213,7 @@ body{
     .nameHighligter{
         display: block;
         font-size: 2rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     .paraClass{

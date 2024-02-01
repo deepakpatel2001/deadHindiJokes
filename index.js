@@ -1,3 +1,4 @@
+// validation
 var userNmeInfo = document.querySelector("#uName");
 userNmeInfo.addEventListener("keypress", (event) => {
   var regex = /[a-zA-Z ]/;
@@ -6,6 +7,25 @@ userNmeInfo.addEventListener("keypress", (event) => {
   }
 });
 
+// stoping user for inspecting value
+var contextMenu = document.querySelector("#contextMenu");
+contextMenu.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+  alert("You can't inspect");
+});
+
+contextMenu.addEventListener(
+  "keydown",
+  function (event) {
+    if (event.ctrlKey && (event.keyCode == 85 || event.keyCode == 73)) {
+      event.preventDefault();
+      alert("You can't inspect");
+    }
+  },
+  false
+);
+
+// validating user if text field is empty then not able to click on the button
 var userName;
 var saveButton = document.querySelector("#saveBtn");
 userNmeInfo.addEventListener("focusout", () => {
@@ -16,6 +36,7 @@ userNmeInfo.addEventListener("focusout", () => {
   }
 });
 
+// getting user name and saving in localstorage
 saveButton.addEventListener("click", () => {
   userName = document.querySelector("#uName").value;
   localStorage.setItem("userName", userName);
@@ -23,6 +44,7 @@ saveButton.addEventListener("click", () => {
   sendingUserName();
 });
 
+// printing the user name into the containerParent div
 var printName;
 var sendingUserName = () => {
   document.querySelector(".userInfo").style.display = "none";
@@ -30,15 +52,17 @@ var sendingUserName = () => {
   printName.innerHTML = localStorage.getItem("userName");
 };
 
+// validating if localstorage have user data then don't need to do take input
 if (localStorage.getItem("userName") != null) {
   sendingUserName();
   document.querySelector(".parentContainer").style.display = "block";
   document.querySelector(".userInfo").style.display = "none";
 }
 
-var changeData = document.querySelector(".changeBtn");
+// api calling and adding some validation
 var loader;
 var instruction;
+var changeData = document.querySelector(".changeBtn");
 changeData.addEventListener("click", () => {
   loader = document.querySelector(".paraClass");
   loader.innerText = "loading..👻";
@@ -58,21 +82,23 @@ changeData.addEventListener("click", () => {
       console.log(error);
       loader.innerText =
         "Some problem in loading data, try again sometime later";
-        if(error){
-          changeData.setAttribute("disabled",true)  
-        }else{
-          changeData.removeAttribute("disabled");
-        }
+      if (error) {
+        changeData.setAttribute("disabled", true);
+      } else {
+        changeData.removeAttribute("disabled");
+      }
     },
   });
 });
 
+// adding jokes in the parent container
 var para;
 var sendingJoke = (responseJoke) => {
   para = document.querySelector(".paraClass");
   para.innerHTML = responseJoke;
 };
 
+// greeting user by his localstorage data
 var greetingOfDay;
 var reference = document.querySelector(".greeting");
 var time = new Date().getHours();
