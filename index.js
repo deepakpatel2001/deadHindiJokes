@@ -80,9 +80,9 @@ var reference = document.querySelector(".greeting");
 var time = new Date().getHours();
 if (time < 12) {
   reference.innerHTML = "Good Morning 🌅";
-} else if (time <= 12 || time >= 17) {
+} else if (time >= 12 && time <= 17) {
   reference.innerHTML = "Good afternoon 🌇";
-} else if (time <= 17 || time >= 20) {
+} else if (time >= 17 && time <= 20) {
   reference.innerHTML = "Good Evening 🌆";
 } else {
   reference.innerHTML = "Good Night 🌚";
