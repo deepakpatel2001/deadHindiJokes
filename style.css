@@ -151,7 +151,7 @@ body{
     }
 
     .parentContainer{
-        width: 30rem;
+        width: 40rem;
     }
 
     .paraClass{
@@ -169,7 +169,7 @@ body{
 }
 
 
-@media screen and (max-width: 231px) {
+@media screen and (max-width: 287px) {
     html{
         font-size: 35%;
         font-family: 'Times New Roman', Times, serif;
