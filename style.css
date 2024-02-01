@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: rgb(248, 135, 123);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.userInfo{
+    margin-bottom: 10rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.userInfo input{
+    font-size: 1.8rem;
+    border: 0.2rem solid;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.parentContainer{
+    border: 2px solid;
+    font-size: 2.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(105, 144, 233);
+    display: none;
+}
+
+.paraClass{
+    font-family: cursive;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.instruction{
+    font-size: 3rem;
+    color: yellow;
+    font-weight: 700;
+}
+
+.rjG{
+    padding: 0.3px 0.6px;
+    font-size: 2.5rem;
+    border: 2px solid;
+    border-radius: 3rem;
+    cursor: pointer;
+    width: 25rem;
+    padding: 0.7rem;
+    margin: 1rem auto;
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to right, cyan, rgb(221, 255, 0));
+}
+
+.changeBtn{
+    font-size: 3rem;
+    margin-top: 1rem;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: rgb(73, 237, 117);
+    border: 2px solid;
+    outline: none;
+    border-radius: 1rem;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.changeBtn::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: cyan;
+    border: 2px solid;
+    border-radius: 1rem;
+    top: 0;
+    left: -26rem;
+    transition: 0.5s ease;
+    z-index: -1;
+    outline: none;
+    border: none;
+}
+
+.changeBtn:hover::before{
+    left: 0px;
+}
+
+.mark{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.nameHighligter{
+    font-weight: 900;
+    color: rgb(91, 61, 50);
+    font-size: 2.5rem;
+    font-family: cursive;
+}
+
+
+@media screen and (max-width: 516px) {
+    html{
+        font-size: 55%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .parentContainer{
+        width: 42rem;
+    }
+
+    .paraClass{
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .nameHighligter{
+        font-size: 2rem;
+    }
+
+    .rgj{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
+@media screen and (max-width: 293px) {
+    html{
+        font-size: 45%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .parentContainer{
+        width: 30rem;
+    }
+
+    .paraClass{
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .nameHighligter{
+        display: block;
+        font-size: 2rem;
+    }
+
+    .rjG{
+        margin: 0 10rem;
+    }
+}
+
+
+@media screen and (max-width: 231px) {
+    html{
+        font-size: 35%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .parentContainer{
+        width: 38rem;
+    }
+
+    .nameHighligter{
+        display: block;
+        font-size: 2rem;
+    }
+
+    .paraClass{
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .rjG{
+        margin: 0 10rem;
+    }
+
+    .paraClass{
+        margin: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 216px) {
+    html{
+        font-size: 30%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .parentContainer{
+        width: 35rem;
+    }
+
+    .nameHighligter{
+        display: block;
+        font-size: 2rem;
+    }
+
+    .paraClass{
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .rjG{
+        margin: 0.1rem auto;
+    }
+
+    .paraClass{
+        margin: 2rem 0;
+    }
+}
