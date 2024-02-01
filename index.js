@@ -8,22 +8,22 @@ userNmeInfo.addEventListener("keypress", (event) => {
 });
 
 // stoping user for inspecting value
-var contextMenu = document.querySelector("#contextMenu");
-contextMenu.addEventListener("contextmenu", (event) => {
-  event.preventDefault();
-  alert("You can't inspect");
-});
+// var contextMenu = document.querySelector("#contextMenu");
+// contextMenu.addEventListener("contextmenu", (event) => {
+//   event.preventDefault();
+//   alert("You can't inspect");
+// });
 
-contextMenu.addEventListener(
-  "keydown",
-  function (event) {
-    if (event.ctrlKey && (event.keyCode == 85 || event.keyCode == 73)) {
-      event.preventDefault();
-      alert("You can't inspect");
-    }
-  },
-  false
-);
+// contextMenu.addEventListener(
+//   "keydown",
+//   function (event) {
+//     if (event.ctrlKey && (event.keyCode == 85 || event.keyCode == 73)) {
+//       event.preventDefault();
+//       alert("You can't inspect");
+//     }
+//   },
+//   false
+// );
 
 // validating user if text field is empty then not able to click on the button
 var userName;
