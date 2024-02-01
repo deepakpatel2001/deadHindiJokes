@@ -25,6 +25,7 @@ saveButton.addEventListener("click", () => {
 
 var printName;
 var sendingUserName = () => {
+  document.querySelector(".userInfo").style.display = "none";
   printName = document.querySelector(".retValue");
   printName.innerHTML = localStorage.getItem("userName");
 };
@@ -34,14 +35,6 @@ if (localStorage.getItem("userName") != null) {
   document.querySelector(".parentContainer").style.display = "block";
   document.querySelector(".userInfo").style.display = "none";
 }
-
-// validation
-
-// var contextMenu = document.querySelector('#contextMenu');
-// contextMenu.addEventListener('contextemnu', (e) => {
-//     e.preventDefault()
-//     console.log("set");
-// })
 
 var changeData = document.querySelector(".changeBtn");
 var loader;
@@ -61,10 +54,15 @@ changeData.addEventListener("click", () => {
       var responseJoke = response.jokeContent;
       sendingJoke(responseJoke);
     },
-    error: () => {
-      console.log(error.statusCode);
+    error: (error) => {
+      console.log(error);
       loader.innerText =
         "Some problem in loading data, try again sometime later";
+        if(error){
+          changeData.setAttribute("disabled",true)  
+        }else{
+          changeData.removeAttribute("disabled");
+        }
     },
   });
 });
